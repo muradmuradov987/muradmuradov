@@ -1,0 +1,162 @@
+.contact__info {
+    margin: 50px 0px;
+    border-top: 1px solid $light-green;
+    border-bottom: 1px solid $light-green;
+    padding: 20px 0px;
+    position: relative;
+    background: rgba($color: $light-green, $alpha: 0.5);
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0px 0px 70px 10px rgba($color: $light-green, $alpha: 0.5);
+    &::before {
+        width: 1px;
+        height: 50px;
+        bottom: -50px;
+        left: 50%;
+        content: "";
+        position: absolute;
+        background: $light-green;
+    }
+}
+.none__before {
+    &::before {
+        opacity: 0;
+    }
+}
+.info__card {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $light-green;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    &:hover {
+        background: rgba($color: $light-green, $alpha: 0.1);
+        box-shadow: 0px 0px 70px 10px rgba($color: $light-green, $alpha: 0.3);
+    }
+    &::before {
+        content: "";
+        width: 1px;
+        height: 50px;
+        background: $light-green;
+        position: absolute;
+        bottom: -50px;
+    }
+    i {
+        font-size: 30px;
+        color: $light-green;
+        margin-bottom: 20px;
+    }
+    h5 {
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    a{
+        margin: 0px 10px;
+    }
+}
+form {
+    .form__control {
+        position: relative;
+        margin-bottom: 50px;
+        &::before {
+            content: "";
+            width: 1px;
+            height: 50px;
+            background: $light-green;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+        }
+        label {
+            position: absolute;
+            opacity: 0.3;
+            left: 20px;
+            color: $light-green;
+            transition: all 0.5s;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        input,
+        textarea {
+            width: 100%;
+            padding: 20px;
+            background: transparent;
+            border: none;
+            color: $light-green;
+            border: 1px solid $light-green;
+        }
+        input:focus + label,
+        input:hover + label,
+        input:valid + label {
+            top: 0;
+            transform: translateY(-100%);
+            left: 0;
+            opacity: 1;
+        }
+        textarea {
+            min-height: 200px;
+            max-height: 400px;
+        }
+        textarea:focus + label,
+        textarea:hover + label,
+        textarea:valid + label {
+            top: 0;
+            transform: translateY(-100%);
+            left: 0;
+            opacity: 1;
+        }
+    }
+    .textarea {
+        &::before {
+            opacity: 0;
+        }
+    }
+}
+
+.submit {
+    --c: #4bffa5;
+    color: $light-green;
+    background: transparent;
+    border: 1px solid $light-green;
+    width: 170px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 50px;
+    span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: var(--c);
+        transform: translateY(150%);
+        border-radius: 50%;
+        left: calc((var(--n) - 1) * 25%);
+        transition: 0.5s;
+        transition-delay: calc((var(--n) - 1) * 0.1s);
+        z-index: -1;
+        &:nth-child(1) {
+            --n: 1;
+        }
+        &:nth-child(2) {
+            --n: 2;
+        }
+        &:nth-child(3) {
+            --n: 3;
+        }
+        &:nth-child(4) {
+            --n: 4;
+        }
+    }
+    &:hover {
+        color: $black;
+        span {
+            transform: translateY(0) scale(2);
+        }
+    }
+}

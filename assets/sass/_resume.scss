@@ -1,0 +1,249 @@
+#resume {
+    .resume__navbar {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $light-green;
+        margin-top: 100px;
+        padding-bottom: 20px;
+        button {
+            --c: #4bffa5;
+            color: $light-green;
+            background: transparent;
+            border: 1px solid $light-green;
+            width: 170px;
+            padding: 12px 0px;
+            position: relative;
+            overflow: hidden;
+            font-size: 18px;
+            z-index: 1;
+            transition: 0.5s;
+            margin-right: 20px;
+            span {
+                position: absolute;
+                width: 25%;
+                height: 100%;
+                background-color: var(--c);
+                transform: translateY(150%);
+                border-radius: 50%;
+                left: calc((var(--n) - 1) * 25%);
+                transition: 0.5s;
+                transition-delay: calc((var(--n) - 1) * 0.1s);
+                z-index: -1;
+                &:nth-child(1) {
+                    --n: 1;
+                }
+                &:nth-child(2) {
+                    --n: 2;
+                }
+                &:nth-child(3) {
+                    --n: 3;
+                }
+                &:nth-child(4) {
+                    --n: 4;
+                }
+            }
+            &:hover {
+                color: $black;
+
+                box-shadow: 0px 0px 70px 10px rgba($color: $light-green, $alpha: 0.3);
+                span {
+                    transform: translateY(0) scale(2);
+                }
+            }
+        }
+        .active {
+            background: $light-green;
+            color: $black;
+        }
+    }
+    .tab-pane {
+        margin-top: 50px;
+        .work__experience {
+            position: relative;
+            padding: 20px;
+            h3 {
+                color: $light-green;
+            }
+            span {
+                color: $light-green;
+                font-size: 14px;
+                margin-left: 10px;
+            }
+            li {
+                &::marker {
+                    color: $light-green;
+                }
+            }
+            @mixin btn-border-drawing(
+                $color: #ccc,
+                $hover: black,
+                $width: 2px,
+                $vertical: top,
+                $horizontal: left,
+                $duration: 0.25s
+            ) {
+                &::before,
+                &::after {
+                    border: 0 solid transparent;
+                    box-sizing: border-box;
+                    content: "";
+                    pointer-events: none;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    #{$vertical}: 0;
+                    #{$horizontal}: 0;
+                }
+
+                &::before {
+                    $h-side: if($horizontal == "left", "right", "left");
+
+                    border-#{$vertical}-width: $width;
+                    border-#{$h-side}-width: $width;
+                }
+
+                &::after {
+                    $v-side: if($vertical == "top", "bottom", "top");
+
+                    border-#{$v-side}-width: $width;
+                    border-#{$horizontal}-width: $width;
+                }
+
+                &:hover {
+                    &::before,
+                    &::after {
+                        border-color: $hover;
+                        transition: border-color 0s, width $duration, height $duration;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &::before {
+                        transition-delay: 0s, 0s, $duration;
+                    }
+
+                    &::after {
+                        transition-delay: 0s, $duration, 0s;
+                    }
+                }
+            }
+
+            @include btn-border-drawing(#58afd1, $light-green, 1px, bottom, left);
+        }
+        .web {
+            margin-bottom: 50px;
+            h2 {
+                margin-bottom: 20px;
+                color: $light-green;
+            }
+            .web__content {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                i {
+                    width: 45px;
+                    font-size: 35px;
+                }
+                h5 {
+                    margin-left: 15px;
+                    margin-bottom: 0;
+                }
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+                .fa-html5 {
+                    color: #e34c26;
+                }
+                .fa-css3 {
+                    color: #264de4;
+                }
+                .fa-sass {
+                    color: #cd6799;
+                }
+                .fa-bootstrap {
+                    color: #563d7c;
+                }
+                .fa-js {
+                    color: #f0db4f;
+                }
+                .fa-vuejs {
+                    color: #41b883;
+                }
+                .fa-git-alt {
+                    color: #f1502f;
+                }
+            }
+        }
+        .system {
+            h2 {
+                margin-bottom: 20px;
+                color: $light-green;
+            }
+            .system__content {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                i {
+                    color: $light-green;
+                }
+                h5 {
+                    margin-left: 15px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .education {
+            padding: 20px;
+            h3 {
+                color: $light-green;
+            }
+            span {
+                color: $light-green;
+                font-size: 14px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #resume {
+        .resume__navbar {
+            flex-direction: column;
+
+            li {
+                width: 100%;
+                
+            }
+            button{
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+        }
+    }
+}
+
+/*---------------Media Queries--------------*/
+@media (min-width: 767px) and(max-width: 1200px){
+    #resume{
+        .resume__navbar{
+            align-items: center;
+            ul{
+                width: 300px;
+                flex-direction: column;
+                button{
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            }
+            .resume{
+                
+            }
+            
+        }
+    }
+}
