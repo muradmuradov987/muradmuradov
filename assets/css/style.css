@@ -130,7 +130,7 @@ nav .mobile__menu {
     box-shadow: #4bffa5 0px 2px 10px 2px;
   }
   nav .mobile__menu .home i,
-nav .mobile__menu .home p {
+  nav .mobile__menu .home p {
     color: #4bffa5;
   }
   nav .mobile__menu .portfolio {
@@ -138,7 +138,7 @@ nav .mobile__menu .home p {
     box-shadow: red 0px 2px 10px 2px;
   }
   nav .mobile__menu .portfolio i,
-nav .mobile__menu .portfolio p {
+  nav .mobile__menu .portfolio p {
     color: red;
   }
   nav .mobile__menu .resume {
@@ -146,7 +146,7 @@ nav .mobile__menu .portfolio p {
     box-shadow: #00A3FF 0px 2px 10px 2px;
   }
   nav .mobile__menu .resume i,
-nav .mobile__menu .resume p {
+  nav .mobile__menu .resume p {
     color: #00A3FF;
   }
   nav .mobile__menu .contact {
@@ -154,7 +154,7 @@ nav .mobile__menu .resume p {
     box-shadow: yellow 0px 2px 10px 2px;
   }
   nav .mobile__menu .contact i,
-nav .mobile__menu .contact p {
+  nav .mobile__menu .contact p {
     color: yellow;
   }
 }
