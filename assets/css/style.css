@@ -794,6 +794,14 @@ body .body__container {
   justify-content: space-between;
   min-height: 100vh;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #184055;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #4bffa5;
+}
 body #bg {
   position: fixed;
   background: cover;
