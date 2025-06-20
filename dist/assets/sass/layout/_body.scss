@@ -1,0 +1,218 @@
+main {
+  .main__top {
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background: $bg2;
+    display: flex;
+    z-index: 5;
+    position: relative;
+    margin-top: -100px;
+    box-shadow: $boxShadow;
+    .left {
+      width: 50%;
+      display: flex;
+      gap: 30px;
+      border-right: 2px solid $black;
+      .profile__img {
+        @include frame(200px, 200px);
+        border-radius: 15px;
+        border: 5px solid #1d1e24;
+        overflow: hidden;
+        margin-top: -80px;
+        box-shadow: $boxShadow;
+        img {
+          @include imgCover;
+        }
+      }
+      .profile__name {
+        h3 {
+          color: $white;
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+        p {
+          color: $text;
+          font-size: 18px;
+          margin-bottom: 40px;
+        }
+        .social__network {
+          display: flex;
+          gap: 20px;
+          a {
+            @include frame(52px, 52px);
+            border-radius: 5px;
+            background: linear-gradient(to right bottom, #212428, #16181c);
+            @include center;
+            transition: 0.3s ease;
+            svg {
+              width: 25px;
+            }
+            &:hover {
+              box-shadow: $boxShadow;
+
+              background: $bg;
+              transform: translateY(-5px);
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 50%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      .info__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .person__info {
+          span {
+            font-size: 14px;
+          }
+          p {
+            margin-top: 10px;
+
+            font-size: 18px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---------------Media Queries--------------*/
+@media (max-width: 767px) {
+  main {
+    .main__top {
+      height: auto;
+      padding: 15px;
+      border-radius: 8px;
+      flex-direction: column;
+      z-index: 5;
+      margin-top: -100px;
+      .left {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-right: unset;
+        border-bottom: 2px solid $black;
+        .profile__img {
+          @include frame(150px, 150px);
+          border-radius: 10px;
+          border: 3px solid #1d1e24;
+        }
+        .profile__name {
+          h3 {
+            font-size: 26px;
+            margin-bottom: 10px;
+          }
+          p {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+          .social__network {
+            @include center;
+            margin-bottom: 10px;
+            a {
+              @include frame(40px, 40px);
+              border-radius: 5px;
+              svg {
+                width: 20px;
+              }
+              &:hover {
+                border: 1px solid white;
+                background: $bg;
+                transform: translateY(-5px);
+              }
+            }
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        gap: 20px;
+        .info__container {
+          gap: 20px;
+          .person__info {
+            span {
+              font-size: 12px;
+            }
+            p {
+              margin-top: 5px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  main {
+    .main__top {
+      padding: 15px;
+      .left {
+        gap: 15px;
+        .profile__img {
+          @include frame(150px, 150px);
+          border-radius: 10px;
+          border: 3px solid #1d1e24;
+          margin: unset;
+        }
+        .profile__name {
+          h3 {
+            color: $white;
+            font-size: 22px;
+          }
+          p {
+            font-size: 16px;
+          }
+          .social__network {
+            gap: 10px;
+            a {
+              @include frame(40px, 40px);
+              svg {
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        padding: 0px 15px 0px 15px;
+        flex-direction: column;
+        align-items: unset;
+        gap: 10px;
+        .info__container {
+          gap: 10px;
+          .person__info {
+            span {
+              font-size: 12px;
+            }
+            p {
+              margin-top: 5px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+}
+
+
