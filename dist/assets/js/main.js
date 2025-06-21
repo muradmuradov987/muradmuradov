@@ -10,6 +10,12 @@ $(document).ready(() => {
       container.find(".tab").eq(index).addClass("activeTab");
     });
   });
+});
 
-
+window.addEventListener("load", () => {
+  const video = document.querySelector("video");
+  if (video) {
+    video.muted = true;
+    video.play().catch((e) => console.log(e));
+  }
 });

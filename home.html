@@ -5,17 +5,18 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <link rel="icon" href="dist/assets/img/logo-ico.ico" />
+  <link rel="icon" href="dist/assets/img/plugins/logo.ico" />
   <!--Css-->
   <link rel="stylesheet" href="dist/assets/css/style.css" />
   <title>Murad Muradov</title>
 </head>
 
-<body>
+<body id="body">
   <!--HEADER-->
   <header>
     <div class="cover__img">
-      <video src="./dist/assets/video/cover-video.mp4" autoplay></video>
+      <div class="overlay"></div>
+      <img src="./dist/assets/img/cover.jpg" >
     </div>
   </header>
   <!--HEADER end-->
@@ -25,13 +26,13 @@
       <div class="main__top">
         <div class="left">
           <div class="profile__img">
-            <img src="./dist/assets/img/profile2.jpg">
+            <img src="./dist/assets/img/profile.jpg">
           </div>
           <div class="profile__name">
             <h3>Murad Muradov</h3>
             <p>Front-End Developer</p>
             <div class="social__network">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/murad-muradov-561b8117a/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
@@ -40,7 +41,7 @@
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </a>
-              <a href="#">
+              <a href="https://github.com/muradmuradov987" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                     color="currentColor">
@@ -50,7 +51,7 @@
                   </g>
                 </svg>
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/muradmuradov987" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2z" />
@@ -95,17 +96,17 @@
             <div class="tab about activeTab">
               <div class="about__top">
                 <div class="left">
-                  <img src="./dist/assets/img/pinia.png">
+                  <img src="./dist/assets/img/about.png">
                 </div>
                 <div class="right">
                   <span>VISIT MY PORTFOLIO</span>
                   <h3>About Me</h3>
-                  <p>Front-End Developer with 4+ years of experience specializing in building scalable, responsive web
-                    applications using Vue.js, Nuxt.js, and modern JavaScript frameworks. Strong expertise in creating
-                    reusable components, state management with Pinia, and delivering pixel-perfect UI using CSS and
-                    Figma designs. Eager to contribute my skills to innovative teams and deliver outstanding digital
-                    experiences.</p>
-                  <a href="#" target="_blank">DOWNLOAD MY CV</a>
+                  <p>I am Front-End Developer with over 4 years of experience specializing in building modern and
+                    responsive web applications. My focus is on creating clean, scalable code and seamless user
+                    experiences. I am comfortable working with tools and libraries such as Sass, Bootstrap, Jquery, Nuxt
+                    etc. I am also experienced in task management using platforms such as Jira and GitLab. I am always
+                    open to learning, developing, and contributing to innovative projects.</p>
+                  <a href="./dist/assets/resume.pdf" target="_blank">DOWNLOAD MY CV</a>
                 </div>
 
               </div>
@@ -640,7 +641,7 @@
                   <img src="./dist/assets/img/skills-icon/figma.png">
                   <span>Figma</span>
                 </div>
-                 <div class="skill__card">
+                <div class="skill__card">
                   <img src="./dist/assets/img/skills-icon/jira.png">
                   <span>Jira</span>
                 </div>
@@ -661,7 +662,69 @@
             </div>
             <!--Contact-->
             <div class="tab contact">
-              Contact
+              <h1 class="tab__title">Contact</h1>
+              <div class="contact__container">
+                <div class="left">
+                  <div class="contact__img">
+                    <img src="./dist/assets/img/contact.jpg">
+                  </div>
+                  <h3>Murad Muradov</h3>
+                  <span>Front-End Developer</span>
+                  <p>I am available for freelance work. Connect with me via and call in to my account.</p>
+                  <div class="contact__info">PHONE : <span>+994 51 540 95 61</span></div>
+                  <div class="contact__info">EMAIL : <span>m.muradmuradov@gmail.com</span></div>
+                  <div class="social__network">
+                    <span>FIND ME</span>
+                    <div>
+                      <a href="https://www.linkedin.com/in/murad-muradov-561b8117a/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="feather feather-linkedin">
+                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                          </path>
+                          <rect x="2" y="9" width="4" height="12"></rect>
+                          <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                      </a>
+                      <a href="https://github.com/muradmuradov987" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" color="currentColor">
+                            <path d="M10 20.568c-3.429 1.157-6.286 0-8-3.568" />
+                            <path
+                              d="M10 22v-3.242c0-.598.184-1.118.48-1.588c.204-.322.064-.78-.303-.88C7.134 15.452 5 14.107 5 9.645c0-1.16.38-2.25 1.048-3.2c.166-.236.25-.354.27-.46c.02-.108-.015-.247-.085-.527c-.283-1.136-.264-2.343.16-3.43c0 0 .877-.287 2.874.96c.456.285.684.428.885.46s.469-.035 1.005-.169A9.5 9.5 0 0 1 13.5 3a9.6 9.6 0 0 1 2.343.28c.536.134.805.2 1.006.169c.2-.032.428-.175.884-.46c1.997-1.247 2.874-.96 2.874-.96c.424 1.087.443 2.294.16 3.43c-.07.28-.104.42-.084.526s.103.225.269.461c.668.95 1.048 2.04 1.048 3.2c0 4.462-2.134 5.807-5.177 6.643c-.367.101-.507.559-.303.88c.296.47.48.99.48 1.589V22" />
+                          </g>
+                        </svg>
+                      </a>
+                      <a href="https://www.facebook.com/muradmuradov987" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="form__control">
+                    <label>Your Name</label>
+                    <input type="text">
+                  </div>
+                  <div class="form__control">
+                    <label>Phone Number</label>
+                    <input type="text">
+                  </div>
+                  <div class="form__control">
+                    <label>Email</label>
+                    <input type="text">
+                  </div>
+                  <div class="form__control">
+                    <label>Your Message</label>
+                    <textarea></textarea>
+                  </div>
+                  <button>Send Message </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -670,17 +733,27 @@
   </main>
 
 
-  <!--FOOTER-->
-  <footer>
-
-  </footer>
-  <!--FOOTER end-->
 
 
+  <script src="./dist/assets/js/three.r134.js"></script>
+  <script src="./dist/assets/js/vanta.net.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#body",
+      mouseControls: true,
+      touchControls: false,
+      scale: 1,
+      scaleMobile: 1.00,
+      color: 0xff014f,
+      backgroundColor: 0x1d1e24,
+      points: 8.00,
+      maxDistance: 20.00,
+      spacing: 12.00
+    })
 
+    // color: 0xff014f,
 
-
-
+  </script>
   <script src="dist/assets/js/jquery.js"></script>
   <script src="dist/assets/js/main.js"></script>
 </body>

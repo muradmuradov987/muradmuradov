@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,13 +57,17 @@ body {
   overflow-x: hidden !important;
   position: relative;
   min-height: 100vh;
-  background: #1d1e24;
+  padding-bottom: 100px;
   color: #c4cfde;
+}
+body canvas {
+  height: 130vh !important;
+  position: fixed !important;
 }
 
 * {
   text-decoration: none;
-  font-family: "Open Sans", serif !important;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   outline: none;
 }
@@ -545,6 +549,7 @@ section {
   box-shadow: 0px 1px 10px 1px rgba(228, 23, 23, 0.75);
   border-radius: 10px;
   padding: 15px;
+  background: #212428;
 }
 .main__body .tab__container .tab__links button {
   border: none;
@@ -568,6 +573,7 @@ section {
   padding: 20px;
   box-shadow: 0px 1px 10px 1px rgba(228, 23, 23, 0.75);
   border-radius: 10px;
+  background: #212428;
 }
 .main__body .tab__container .tab__contents .tab {
   display: none;
@@ -596,7 +602,7 @@ section {
   height: 400px;
   overflow: hidden;
   border-radius: 15px;
-  border: 1px solid #ff014f;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
 }
 .main__body .tab__container .tab__contents .about .about__top .left img {
   width: 100%;
@@ -828,6 +834,153 @@ section {
   top: 5px;
   left: 0;
 }
+.main__body .tab__container .tab__contents .contact .contact__container {
+  display: flex;
+  gap: 30px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left {
+  width: 40%;
+  padding: 20px 15px;
+  border-radius: 10px;
+  background: #212428;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .contact__img {
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .contact__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .contact__img:hover img {
+  scale: 1.1;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left h3 {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left span {
+  font-size: 18px;
+  line-height: 30px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left p {
+  margin: 25px 0;
+  line-height: 30px;
+  font-size: 16px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .contact__info {
+  font-size: 16px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .contact__info span {
+  color: #ffffff;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .social__network {
+  margin-top: 20px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .social__network span {
+  font-size: 16px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .social__network div {
+  margin-top: 5px;
+  display: flex;
+  gap: 20px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .social__network div a {
+  width: 52px;
+  height: 52px;
+  border-radius: 5px;
+  background: linear-gradient(to right bottom, #212428, #16181c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .social__network div a svg {
+  width: 25px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .left .social__network div a:hover {
+  box-shadow: 0px 1px 10px 1px rgba(228, 23, 23, 0.75);
+  background: #1d1e24;
+  transform: translateY(-5px);
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right {
+  width: 60%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #212428;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right .form__control {
+  display: flex;
+  flex-direction: column;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right .form__control label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right .form__control input {
+  margin-top: 10px;
+  width: 100%;
+  background: #212428;
+  height: 55px;
+  transition: 0.3s ease;
+  border: 2px solid #212428;
+  padding: 0 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #c4cfde;
+  box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right .form__control input:focus {
+  border: 1px solid #ff014f;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right .form__control textarea {
+  width: 100%;
+  padding: 15px;
+  resize: none;
+  margin-top: 10px;
+  background: #212428;
+  height: 150px;
+  transition: 0.3s ease;
+  border: 2px solid #212428;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #c4cfde;
+  box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right .form__control textarea:focus {
+  border: 1px solid #ff014f;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right button {
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  cursor: pointer;
+  color: #ff014f;
+  font-size: 18px;
+  background: linear-gradient(to right bottom, #212428, #16181c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+.main__body .tab__container .tab__contents .contact .contact__container .right button:hover {
+  box-shadow: 0px 1px 10px 1px rgba(228, 23, 23, 0.75);
+  background: #1d1e24;
+  transform: translateY(-5px);
+}
 
 /*---------------Media Queries--------------*/
 @media (max-width: 767px) {
@@ -863,18 +1016,46 @@ section {
     box-shadow: 0px 1px 10px 1px rgba(228, 23, 23, 0.75);
     border-radius: 10px;
   }
-  .main__body .tab__container .tab__contents .about__top {
+  .main__body .tab__container .tab__contents .about .about__top {
     all: unset;
   }
-  .main__body .tab__container .tab__contents .about__top .left {
+  .main__body .tab__container .tab__contents .about .about__top .left {
     display: none;
   }
-  .main__body .tab__container .tab__contents .about__top .right {
+  .main__body .tab__container .tab__contents .about .about__top .right {
     width: 100%;
     padding: 0px;
   }
-  .main__body .tab__container .tab__contents .about__top .right h3 {
+  .main__body .tab__container .tab__contents .about .about__top .right h3 {
     font-size: 26px;
+  }
+  .main__body .tab__container .tab__contents .skills .skill__container {
+    gap: 15px;
+  }
+  .main__body .tab__container .tab__contents .skills .skill__container .skill__card {
+    width: 60px;
+    padding: 3px;
+  }
+  .main__body .tab__container .tab__contents .skills .skill__container .skill__card img,
+  .main__body .tab__container .tab__contents .skills .skill__container .skill__card svg {
+    width: 50px;
+    height: 50px;
+  }
+  .main__body .tab__container .tab__contents .skills .system__container div {
+    font-size: 18px;
+    line-height: 25px;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .main__body .tab__container .tab__contents .contact .contact__container {
+    flex-direction: column;
+  }
+  .main__body .tab__container .tab__contents .contact .contact__container .left {
+    width: 100%;
+  }
+  .main__body .tab__container .tab__contents .contact .contact__container .right {
+    width: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -889,6 +1070,15 @@ section {
 header .cover__img {
   height: 300px;
   overflow: hidden;
+  position: relative;
+}
+header .cover__img .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
 }
 header .cover__img video {
   width: 100%;
@@ -932,6 +1122,7 @@ main .main__top .left .profile__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 main .main__top .left .profile__name h3 {
   color: #ffffff;
@@ -1106,12 +1297,4 @@ main .main__top .right .info__container .person__info p {
     margin-top: 5px;
     font-size: 14px;
   }
-}
-footer {
-  padding: 50px;
-  background: #212428;
-  margin-top: 100px;
-  box-shadow: 0px 1px 10px 1px rgba(228, 23, 23, 0.75);
-}
-
-/*---------------Media Queries--------------*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,15 @@ header {
   .cover__img {
     height: 300px;
     overflow: hidden;
+    position: relative;
+    .overlay{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.7)
+    }
     video {
       @include imgCover;
     }
