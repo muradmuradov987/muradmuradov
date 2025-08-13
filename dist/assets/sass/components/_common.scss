@@ -61,7 +61,7 @@
           display: flex;
           gap: 30px;
           .left {
-            width: 40%;
+            width: 45%;
             height: 400px;
             overflow: hidden;
             border-radius: 15px;
@@ -71,17 +71,7 @@
             }
           }
           .right {
-            width: 60%;
-            padding: 50px 0;
-            span {
-              color: $red;
-              text-align: center;
-              letter-spacing: 1px;
-              display: block;
-              line-height: 14px;
-              font-weight: 700;
-              margin-bottom: 20px;
-            }
+            width: 55%;
             h3 {
               font-size: 32px;
               margin-bottom: 20px;
@@ -211,7 +201,7 @@
       //Portfolio
       .port {
         .port__card {
-          padding: 20px 15px;
+          padding: 15px;
           background: linear-gradient(145deg, #1e2024, #23272b);
           box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
           transition: 0.3s ease;
@@ -223,13 +213,17 @@
               scale: 1.05;
             }
           }
-          img {
+          .port__img {
+            display: block;
             height: 150px;
-            border-radius: 8px;
-            @include imgCover;
-            transition: 0.3s ease;
             margin-bottom: 20px;
+            img {
+              border-radius: 8px;
+              @include imgCover;
+              transition: 0.3s ease;
+            }
           }
+
           .port__card-bottom {
             display: flex;
             align-items: center;
@@ -240,7 +234,7 @@
               font-weight: 700;
             }
             a {
-              @include frame(52px, 52px);
+              @include frame(40px, 40px);
               border-radius: 5px;
               background: linear-gradient(to right bottom, #212428, #16181c);
               @include center;
